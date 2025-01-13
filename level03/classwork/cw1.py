@@ -1,0 +1,3 @@
+apple = "🍏"
+
+print(apple)
