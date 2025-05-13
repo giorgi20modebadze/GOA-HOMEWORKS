@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Bar Animation</title>
+    <style>
+        /* Reset all margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        /* Container for the loading bar */
+        .loading-container {
+            width: 80%;
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: showContainer 5s forwards; /* Delay the loading container animation */
+        }
+
+        /* The actual loading bar */
+        .loading-bar {
+            width: 0;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 10px;
+            animation: loading 5s linear 5s forwards, fadeOut 1s 10s forwards; /* Start after 5 seconds */
+        }
+
+        /* Animation to increase width of the loading bar */
+        @keyframes loading {
+            0% {
+                width: 0;
+                background-color: #4caf50;
+            }
+            50% {
+                background-color: #ff9800;
+            }
+            100% {
+                width: 100%;
+                background-color: #f44336;
+            }
+        }
+
+        /* Fade-out animation for the bar when loading is complete */
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Animation to show the loading container after 5 seconds */
+        @keyframes showContainer {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-bar"></div>
+    </div>
+</body>
+</html>
+
+
