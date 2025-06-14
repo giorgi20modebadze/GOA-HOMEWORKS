@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFT Preview Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --soft-blue: hsl(178, 100%, 50%);
+      --dark-cyan: hsl(178, 100%, 50%);
+      --white: hsl(0, 0%, 100%);
+      --grayish-blue: hsl(216, 50%, 16%);
+      --light-grayish-blue: hsl(216, 50%, 18%);
+      --dark-grayish-blue: hsl(215, 32%, 27%);
+      --dark-gray: hsl(0, 0%, 30%);
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: var(--light-grayish-blue);
+      color: var(--white);
+    }
+
+    .card {
+      background-color: var(--grayish-blue);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-content p {
+      font-size: 0.875rem;
+      color: var(--dark-gray);
+      margin-bottom: 1rem;
+    }
+
+    .card-content .price {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--soft-blue);
+      margin-bottom: 1rem;
+    }
+
+    .card-content .creator {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .card-content .creator img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+
+    .card-footer {
+      background-color: var(--dark-grayish-blue);
+      padding: 1rem;
+      border-radius: 0 0 15px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-footer button {
+      padding: 0.5rem 1rem;
+      background-color: var(--soft-blue);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-footer button:hover {
+      background-color: var(--dark-cyan);
+    }
+
+    .card-footer .likes {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .card-footer .likes img {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 350px) {
+      .card {
+        width: 100%;
+      }
+
+      .card-content h1 {
+        font-size: 1.1rem;
+      }
+
+      .card-content p {
+        font-size: 0.8rem;
+      }
+
+      .card-footer button {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/350x200" alt="NFT Image" />
+    <div class="card-content">
+      <h1>Equilibrium #3429</h1>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <p class="price">0.041 ETH</p>
+      <div class="creator">
+        <img src="https://via.placeholder.com/25" alt="Creator" />
+        <p>Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button>Buy Now</button>
+      <div class="likes">
+        <img src="https://via.placeholder.com/18" alt="Heart Icon" />
+        <p>250</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+

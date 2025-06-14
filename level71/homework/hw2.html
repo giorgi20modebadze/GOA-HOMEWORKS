@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Proof Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .testimonials {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .testimonial {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .testimonial img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial .name {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .testimonial .position {
+      font-size: 0.875rem;
+      color: #777;
+    }
+
+    .testimonial .rating {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .star {
+      color: #ff6f61;
+      font-size: 1.25rem;
+    }
+
+    .star.empty {
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .testimonials {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>What Our Customers Say</h1>
+    <div class="testimonials">
+      <!-- Testimonial 1 -->
+      <div class="testimonial">
+        <img src="https://via.placeholder.com/60" alt="Customer 1" />
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt."</p>
+        <p class="name">John Doe</p>
+        <p class="position">CEO, Company X</p>
+        <div class="rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star empty">★</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial">
+        <img src="https://via.placeholder.com/60" alt="Customer 2" />
+        <p>"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae."</p>
+        <p class="name">Jane Smith</p>
+        <p class="position">Marketing Director, Company Y</p>
+        <div class="rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial">
+        <img src="https://via.placeholder.com/60" alt="Customer 3" />
+        <p>"Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra."</p>
+        <p class="name">Alice Brown</p>
+        <p class="position">Designer, Company Z</p>
+        <div class="rating">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star empty">★</span>
+          <span class="star empty">★</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
