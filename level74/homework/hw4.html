@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Centered Grid Example</title>
+  <style>
+    
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; 
+      align-items: center;    
+      background-color: #f0f0f0;
+    }
+
+    
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, auto); 
+      grid-template-rows: repeat(3, auto);    
+      gap: 20px; 
+      background-color: #ffffff;
+      padding: 20px;
+      border: 3px solid red;
+    }
+
+    
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;  
+      align-items: center;      
+      text-align: center;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">10</div>
+    <div class="box">9</div>
+    <div class="box">8</div>
+    <div class="box">7</div>
+    <div class="box">6</div>
+    <div class="box">5</div>
+    <div class="box">4</div>
+    <div class="box">3</div>
+    <div class="box">2</div>
+  </div>
+
+</body>
+</html>

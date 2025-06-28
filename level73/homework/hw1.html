@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results Summary Component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-red: hsl(0, 100%, 67%);
+      --orangey-yellow: hsl(39, 100%, 56%);
+      --green-teal: hsl(166, 100%, 37%);
+      --cobalt-blue: hsl(234, 85%, 45%);
+      --light-slate-blue: hsl(252, 100%, 67%);
+      --light-royal-blue: hsl(241, 81%, 54%);
+      --violet-blue: hsla(256, 72%, 46%, 1);
+      --persian-blue: hsla(241, 72%, 46%, 0);
+      --pale-blue: hsl(221, 100%, 96%);
+      --light-lavender: hsl(241, 100%, 89%);
+      --dark-gray-blue: hsl(224, 30%, 27%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    body {
+      background: var(--pale-blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 600px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .result {
+      background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .result h2 {
+      color: var(--light-lavender);
+      font-weight: 500;
+    }
+
+    .score-circle {
+      background: linear-gradient(var(--violet-blue), var(--persian-blue));
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .score {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .out-of {
+      font-size: 0.875rem;
+      color: var(--light-lavender);
+    }
+
+    .result h3 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .description {
+      font-size: 0.875rem;
+      color: var(--light-lavender);
+      margin-top: 0.5rem;
+    }
+
+    .summary {
+      padding: 2rem;
+    }
+
+    .summary h2 {
+      margin-bottom: 1rem;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .summary-item img {
+      margin-right: 0.5rem;
+    }
+
+    .summary-item p {
+      flex: 1;
+    }
+
+    .score-text span {
+      font-weight: 800;
+    }
+
+    .reaction {
+      background-color: hsl(0, 100%, 97%);
+      color: var(--light-red);
+    }
+
+    .memory {
+      background-color: hsl(39, 100%, 97%);
+      color: var(--orangey-yellow);
+    }
+
+    .verbal {
+      background-color: hsl(166, 100%, 97%);
+      color: var(--green-teal);
+    }
+
+    .visual {
+      background-color: hsl(234, 85%, 97%);
+      color: var(--cobalt-blue);
+    }
+
+    .continue-btn {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      background-color: var(--dark-gray-blue);
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .continue-btn:hover {
+      background-color: var(--cobalt-blue);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="result">
+      <h2>Your Result</h2>
+      <div class="score-circle">
+        <p class="score">76</p>
+        <p class="out-of">of 100</p>
+      </div>
+      <h3>Great</h3>
+      <p class="description">You scored higher than 65% of the people who have taken these tests.</p>
+    </section>
+
+    <section class="summary">
+      <h2>Summary</h2>
+
+      <div class="summary-item reaction">
+        <img src="https://raw.githubusercontent.com/frontendmentor/summary-component/main/assets/images/icon-reaction.svg">
+        <p>Reaction</p>
+        <p class="score-text"><span>80</span> / 100</p>
+      </div>
+
+      <div class="summary-item memory">
+        <img src="https://raw.githubusercontent.com/frontendmentor/summary-component/main/assets/images/icon-memory.svg">
+        <p>Memory</p>
+        <p class="score-text"><span>92</span> / 100</p>
+      </div>
+
+      <div class="summary-item verbal">
+        <img src="https://raw.githubusercontent.com/frontendmentor/summary-component/main/assets/images/icon-verbal.svg">
+        <p>Verbal</p>
+        <p class="score-text"><span>61</span> / 100</p>
+      </div>
+
+      <div class="summary-item visual">
+        <img src="https://raw.githubusercontent.com/frontendmentor/summary-component/main/assets/images/icon-visual.svg">
+        <p>Visual</p>
+        <p class="score-text"><span>72</span> / 100</p>
+      </div>
+
+      <button class="continue-btn">Continue</button>
+    </section>
+  </main>
+</body>
+</html>

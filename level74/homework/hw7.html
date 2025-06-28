@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Single Price Grid Component</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: hsl(225, 100%, 94%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: white;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Left side */
+    .left {
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .left h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .left p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      opacity: 0.75;
+      margin-bottom: 30px;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: hsl(224, 100%, 58%);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 40px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(50, 86, 230, 0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: hsl(223, 100%, 65%);
+    }
+
+    /* Right side */
+    .right {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .features {
+      list-style: none;
+      color: hsl(224, 23%, 55%);
+      font-size: 1rem;
+      line-height: 2;
+    }
+
+    .features li::before {
+      content: '✔';
+      color: hsl(245, 75%, 52%);
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+        border-radius: 15px;
+      }
+
+      .left, .right {
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+      }
+
+      .left h1 {
+        font-size: 2rem;
+      }
+
+      .price {
+        font-size: 2.5rem;
+      }
+
+      .features {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h1>Annual Plan</h1>
+      <p>$59.99 per year</p>
+      <div class="price">$59.99</div>
+      <button class="btn">Get Started</button>
+    </div>
+
+    <div class="right">
+      <ul class="features">
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

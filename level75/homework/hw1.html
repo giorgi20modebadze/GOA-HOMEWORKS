@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>4x6 Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(6, 80px);
+      grid-template-rows: repeat(4, 80px);
+      gap: 10px;
+      border: 3px solid red;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .box {
+      width: 80px;
+      height: 80px;
+      background-color: lightgray;
+      border-radius: 6px;
+    }
+
+    
+    .box:nth-child(1),
+    .box:nth-child(2),
+    .box:nth-child(3),
+    .box:nth-child(5),
+    .box:nth-child(6),
+    .box:nth-child(15),
+    .box:nth-child(16),
+    .box:nth-child(17),
+    .box:nth-child(21),
+    .box:nth-child(22),
+    .box:nth-child(23) {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 24 დივი -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+</body>
+</html>
+
+
