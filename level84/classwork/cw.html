@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thalby Project</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+    }
+
+    /* Header */
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+    header button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    header button:hover {
+      background: #333;
+    }
+
+    /* Cards Section */
+    .cards-section {
+      margin: 40px 0;
+    }
+    .cards-title {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #444;
+    }
+    .cards-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #f0e6ff;
+      border-radius: 8px;
+      padding: 20px;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #5336a2;
+    }
+    .card p {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #7d6fbb;
+      margin: 0;
+    }
+
+    /* Text + Image Section */
+    .text-image-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 40px 0;
+      padding: 30px;
+      background: #e9e6f9;
+      border-radius: 10px;
+    }
+    .text-image-section .text {
+      flex: 1;
+    }
+    .text-image-section .text h2 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #3a2f62;
+    }
+    .text-image-section .text p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .text-image-section .image {
+      flex: 1;
+    }
+    .text-image-section .image img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cards-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-image-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Fall deeper in love with human kind</h1>
+      <p>Thalby guides offer insights into people from all over the world.</p>
+      <button>Shop Now</button>
+    </header>
+
+    <section class="cards-section">
+      <h2 class="cards-title">Our guide explains</h2>
+      <div class="cards-list">
+        <div class="card">
+          <img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1726215288/Challenges/sxzfwoarhrwt3gnz4qyg.jpg" alt="Guide 1" />
+          <h3>Culture & Customs</h3>
+          <p>Guide to Germans</p>
+        </div>
+        <div class="card">
+          <img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1726215295/Challenges/ywzfwol88qzwuwm4z0pn.jpg" alt="Guide 2" />
+          <h3>Culture & Customs</h3>
+          <p>Guide to Mexicans</p>
+        </div>
+        <div class="card">
+          <img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1726215303/Challenges/vvwkgk1w6jprwfoqtfv6.jpg" alt="Guide 3" />
+          <h3>Culture & Customs</h3>
+          <p>Guide to Koreans</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-image-section">
+      <div class="text">
+        <h2>Culture explained simply</h2>
+        <p>Understand people from around the world through fun, concise and easy-to-read guides.</p>
+      </div>
+      <div class="image">
+        <img src="https://res.cloudinary.com/dz209s6jk/image/upload/v1726215308/Challenges/hpjs9f7jklqyqnll5cza.jpg" alt="Culture Image" />
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
