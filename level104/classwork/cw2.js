@@ -10,6 +10,21 @@
 
 
 
+function processStrings(arr) {
+ 
+  console.log("სიის სიგრძე:", arr.length);
+
+ 
+  let slice1 = arr.slice(3, 9);
+  console.log(slice1);
+
+
+
+
+
+  let slice2 = arr.slice(4, 7);
+  console.log(slice2);
+}
 
 
 
